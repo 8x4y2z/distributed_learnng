@@ -1,0 +1,32 @@
+** Storage
+*** Current methods for storing distributed learning
+- GFS (Google File System)
+  Partly propritory
+- Amazon S3
+- HDFS
+  Fully open source (apache parquet)
+  Based on Java runtime, might be too inconvenent for DL
+- POSIX archives
+
+*** Runtime Support
+TensorFlow explicitly supports all 4 storages via its file
+system interface abstraction:
+
+Pytorch doesnt, but custom python bindings can be used
+
+*** Disadvantages of existing solutions
+- difficulties in deployment
+- limitations in using existing serialization formats
+
+*** Requirements of DL Distributed storage solution
+- use of standard, widely supported protocols and formats
+- easy migration of existing DL models and datasets
+- scalability that allows storage to be accessed at speeds close to hardware capabilities
+- compatibility with tools for Python and command-line ETL
+
+*** AIS Store
+-
+
+*** Sources
+https://arxiv.org/pdf/2001.01858.pdf
+https://pytorch.org/blog/efficient-pytorch-io-library-for-large-datasets-many-files-many-gpus/
